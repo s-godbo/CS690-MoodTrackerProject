@@ -6,6 +6,8 @@
 # dotenv files
 .env
 
+daymood-data.txt
+
 # User-specific files
 *.rsuser
 *.suo
