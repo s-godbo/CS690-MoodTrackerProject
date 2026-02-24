@@ -1,3 +1,5 @@
+using Spectre.Console;
+
 namespace MoodTracker;
 
 public class ConsoleUI
@@ -11,9 +13,16 @@ public class ConsoleUI
 
     public void Show()
     {
-        string mode = AskForInput("Please select mode (Record a day 'R', Display mood data 'M', or Display trigger data 'T'): ");
+        var mode = AnsiConsole.Prompt(
+                            new SelectionPrompt<string>()
+                            .Title("Please select choice")
+                            .AddChoices(new[]
+                            {
+                                "record a day","display mood data","display trigger data"
+                            })
+        );
 
-        if(mode=="R") {
+        if(mode=="record a day") {
 
             string command;
 
@@ -29,7 +38,14 @@ public class ConsoleUI
 
                 fileSaver.AppendLine(recordNum+":"+moodName);
 
-                command = AskForInput("Enter a command. 'end' to go back to select a different mode or 'continue' to record another day: ");
+                command = AnsiConsole.Prompt(
+                            new SelectionPrompt<string>()
+                            .Title("Do you want to 'continue' to record another day or 'end'?")
+                            .AddChoices(new[]
+                            {
+                                "continue","end"
+                            }));
+            
 
             } while(command!="end");
         }    
