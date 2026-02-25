@@ -1,3 +1,3 @@
 # CS690-MoodTrackerProject
 
-THis project is completed by Samantha Godbold
+This project is completed by Samantha Godbold
