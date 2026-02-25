@@ -16,4 +16,8 @@ public class FileSaver
         File.AppendAllText(this.fileName, line + Environment.NewLine);
     }
 
+    public void AppendData(PersonRecord data)
+    {
+        File.AppendAllText(this.fileName, data.RecordNum + ":" + data.Mood + ":" + data.Stress + ":" + data.Weather + ":" + data.SocialInteract + ":" + data.Sleep + Environment.NewLine);
+    }
 }
