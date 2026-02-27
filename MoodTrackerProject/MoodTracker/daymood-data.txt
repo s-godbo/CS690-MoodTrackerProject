@@ -1,2 +1,5 @@
 1:Excellent:Low:Sunny:Positive:Feeling Well Rested
 2:Good:High:Sunny:Positive:Feeling Well Rested
+3:Excellent:Low:Sunny:Positive:Feeling Well Rested
+4:Good:High:Sunny:Positive:Feeling Well Rested
+5:Excellent:Low:Sunny:Positive:Feeling Well Rested
