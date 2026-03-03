@@ -3,3 +3,13 @@
 3:Excellent:Low:Sunny:Positive:Feeling Well Rested
 4:Good:High:Sunny:Positive:Feeling Well Rested
 5:Excellent:Low:Sunny:Positive:Feeling Well Rested
+6:Excellent:Low:Sunny:Positive:Feeling Well Rested
+7:Good:Low:Sunny:Positive:Feeling Well Rested
+8:Good:Low:Cloudy:Positive:Feeling Well Rested
+9:Good:Low:Cloudy:Positive:Feeling Well Rested
+10:Good:High:Sunny:Positive:Feeling Well Rested
+11:Good:Low:Sunny:Positive:Feeling Well Rested
+12:Okay:High:Cloudy:Positive:Feeling Well Rested
+13:Okay:Low:Sunny:Negative:Feeling Tired
+14:Excellent:Low:Sunny:Positive:Feeling Well Rested
+15:Bad:High:Cloudy:Negative:Feeling Well Rested

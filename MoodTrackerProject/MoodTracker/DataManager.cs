@@ -16,11 +16,12 @@ public class DataManager
         fileSaver = new FileSaver("daymood-data.txt");
 
         Moods = new List<Mood>();
-        Moods.Add(new Mood("Excellent"));
-        Moods.Add(new Mood("Good"));
-        Moods.Add(new Mood("Okay"));
-        Moods.Add(new Mood("Bad"));
-        Moods.Add(new Mood("Worst"));
+        var moodsFileContent = File.ReadAllLines("moods.txt");
+
+        foreach(var moodName in moodsFileContent)
+        {
+            Moods.Add(new Mood(moodName));
+        }
 
         Stresses = new List<Stress>();
         Stresses.Add(new Stress("Low"));
@@ -39,6 +40,33 @@ public class DataManager
         Sleeps.Add(new Sleep("Feeling Tired"));
 
         PersonRecord = new List<PersonRecord>();
+
+        if(File.Exists("daymood-data.txt"))
+        {
+            var personFileContent = File.ReadAllLines("daymood-data.txt");
+            foreach(var line in personFileContent)
+            {
+                var splitted = line.Split(":",StringSplitOptions.RemoveEmptyEntries);
+                var recordNum = int.Parse(splitted[0]);
+
+                var moodName = splitted[1];
+                var mood = new Mood(moodName);
+
+                var stressName = splitted[2];
+                var stress = new Stress(stressName);
+
+                var weatherName = splitted[3];
+                var weather = new Weather(weatherName);
+
+                var socialInteractName = splitted[4];
+                var socialInteract = new SocialInteract(socialInteractName);
+
+                var sleepName = splitted[5];
+                var sleep = new Sleep(sleepName);
+
+                PersonRecord.Add(new PersonRecord(recordNum,mood,stress,weather,socialInteract,sleep));
+            }
+        }
     }
 
     public void AddNewPersonRecord(PersonRecord data)
