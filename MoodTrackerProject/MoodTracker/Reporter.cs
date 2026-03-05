@@ -17,7 +17,7 @@ public class Reporter{
             CountPerMood[piece.Mood.Name] += 1;
         }
         //find the highest mood
-        String highestMood = "";
+        string highestMood = "";
         int highest = -1;
 
         foreach(var moodCountPair in CountPerMood)
