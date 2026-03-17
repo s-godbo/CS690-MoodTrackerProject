@@ -15,6 +15,24 @@ public class ConsoleUI
 
     public void Show()
     {
+        var loginornot = AnsiConsole.Prompt(
+            new SelectionPrompt<string>()
+                                .Title("To enter the Mood Tracker please select login:")
+                                .AddChoices(new[]
+                                {
+                                    "login","never mind"
+                                })
+            );
+        if (loginornot == "never mind")
+        {
+            Console.WriteLine("Bye for now! Please select login next time if you want to enter the Mood Tracker!");
+            return;
+        }
+
+        string name = AskForInput("Please enter your name: ");
+        Console.WriteLine($"Hi {name}! You have entered the Mood Tracker!");
+        Console.WriteLine("");
+        
         string mode;
         do {
             mode = AnsiConsole.Prompt(
@@ -22,7 +40,7 @@ public class ConsoleUI
                                 .Title("Please select choice")
                                 .AddChoices(new[]
                                 {
-                                    "record a day","display mood data","display trigger data","end"
+                                    "record a day","display mood data","display trigger data","logout"
                                 })
             );
 
@@ -109,8 +127,14 @@ public class ConsoleUI
                                     "continue","end"
                                 })); 
                 } while(command!="end");
+
+            } else if (mode == "logout")
+            {
+                Console.WriteLine("Logging out...");
+                break;
             }   
-        } while(mode!="end");
+
+        } while(mode!="logout");
     }
 
     public static string AskForInput(string message)
