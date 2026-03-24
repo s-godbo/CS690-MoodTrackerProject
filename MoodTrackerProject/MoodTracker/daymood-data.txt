@@ -29,3 +29,9 @@
 29:Bad:Low:Cloudy:Negative:Feeling Tired
 30:Excellent:Low:Sunny:Positive:Feeling Well Rested
 31:Bad:High:Cloudy:Negative:Feeling Tired
+32:Okay:High:Cloudy:Positive:Feeling Well Rested
+33:Good:High:Sunny:Positive:Feeling Well Rested
+34:Excellent:Low:Sunny:Positive:Feeling Well Rested
+35:Good:Low:Sunny:Positive:Feeling Well Rested
+36:Excellent:Low:Sunny:Positive:Feeling Tired
+37:Excellent:Low:Sunny:Positive:Feeling Well Rested

@@ -137,20 +137,19 @@ public class Reporter
 
 public class MoodReport
 {
-    public Mood MostMood { get; set; }
+    public Mood MostMood { get; set; } = new Mood("None");
     public int TotalDays { get; set; }
-    public Dictionary<string, int> MoodCounts { get; set; }
 
-    public string MostCommonStress { get; set; }
-    public string MostCommonWeather { get; set; }
-    public string MostCommonSocial { get; set; }
-    public string MostCommonSleep { get; set; }
+    public Dictionary<string, int> MoodCounts { get; set; } = new();
+    public string MostCommonStress { get; set; } = "None";
+    public string MostCommonWeather { get; set; } = "None";
+    public string MostCommonSocial { get; set; } = "None";
+    public string MostCommonSleep { get; set; } = "None";
 
-    public Dictionary<string, int> StressCounts { get; set; }
-    public Dictionary<string, int> WeatherCounts { get; set; }
-    public Dictionary<string, int> SocialCounts { get; set; }
-    public Dictionary<string, int> SleepCounts { get; set; }
-
+    public Dictionary<string, int> StressCounts { get; set; } = new();
+    public Dictionary<string, int> WeatherCounts { get; set; } = new();
+    public Dictionary<string, int> SocialCounts { get; set; } = new();
+    public Dictionary<string, int> SleepCounts { get; set; } = new();
 }
 
 public static class MoodScale

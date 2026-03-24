@@ -122,8 +122,8 @@ public class ConsoleUI
                     //Plot.CreateMoodPlot(dataManager.PersonRecord);
                     //Console.WriteLine("Mood chart saved as mood_plot.png");
                     ConsolePlot.ShowMoodPlot(dataManager.PersonRecord);
-
-
+                    Console.WriteLine("");
+                    Console.WriteLine("");
  
 
 
