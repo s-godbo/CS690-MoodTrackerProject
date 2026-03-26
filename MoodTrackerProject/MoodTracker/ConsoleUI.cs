@@ -78,7 +78,44 @@ public class ConsoleUI
                                 new SelectionPrompt<Sleep>()
                                 .Title("Please select how you felt when you woke up today")
                                 .AddChoices(dataManager.Sleeps));   
-                    Console.WriteLine("You selected that you felt "+selectedSleep.Name+" today.");                    
+                    Console.WriteLine("You selected that you felt "+selectedSleep.Name+" today.");
+
+                    //Trigger advice
+                    Console.WriteLine("");
+                    Console.WriteLine("Here are some suggestions based on the data you entered about your day:");
+
+                    bool triggerAdvice = false;
+
+                    if (selectedWeather.Name == "Cloudy")
+                    {
+                        Console.WriteLine("It was cloudy today. Try to get some sun if you can.");
+                        triggerAdvice = true;
+                    }
+
+                    if (selectedStress.Name == "High")
+                    {
+                        Console.WriteLine("Your stress was high today. Try to do something relaxing or try some exercise.");
+                        triggerAdvice = true;
+                    }
+
+                    if (selectedSocialInteract.Name == "Negative")
+                    {
+                        Console.WriteLine("You had negative social interactions today. Try finding more positive interactions.");
+                        triggerAdvice = true;
+                    }
+
+                    if (selectedSleep.Name == "Feeling Tired")
+                    {
+                        Console.WriteLine("You felt tired today. Try getting to bed earlier tonight or figuring out a way to get better sleep.");
+                        triggerAdvice = true;
+                    }
+
+                    if (!triggerAdvice)
+                    {
+                        Console.WriteLine("What a great day today!");
+                    }
+                    Console.WriteLine("");
+                    
 
                     int recordNum = 1;
                     if (File.Exists("daymood-data.txt"))

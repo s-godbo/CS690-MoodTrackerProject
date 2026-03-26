@@ -163,7 +163,7 @@ public static class MoodScale
             "okay" => 3,
             "good" => 4,
             "excellent" => 5,
-            _ => 3 // default to neutral
+            _ => 3 
         };
     }
 }

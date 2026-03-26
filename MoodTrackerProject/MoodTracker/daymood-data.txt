@@ -35,3 +35,6 @@
 35:Good:Low:Sunny:Positive:Feeling Well Rested
 36:Excellent:Low:Sunny:Positive:Feeling Tired
 37:Excellent:Low:Sunny:Positive:Feeling Well Rested
+38:Good:High:Cloudy:Negative:Feeling Well Rested
+39:Bad:High:Cloudy:Negative:Feeling Tired
+40:Okay:High:Sunny:Negative:Feeling Well Rested
